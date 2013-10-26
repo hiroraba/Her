@@ -6,7 +6,7 @@ describe "StaticPages" do
 
     it "should have the content 'Todolist'" do
 	visit '/static_pages/home'
-        expect(page).to have_content('Todolists!')
+        expect(page).to have_content('Home')
     end
   end
 

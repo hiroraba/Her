@@ -1,4 +1,9 @@
 Todo::Application.routes.draw do
+  root 'static_pages#home'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/newtodo', to: 'todolists#new', via: 'get'
+  match '/signin', to: 'users#new', via: 'get'
   resources :users
   resources :todolists
 
