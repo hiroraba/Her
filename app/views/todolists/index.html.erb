@@ -1,10 +1,11 @@
 <h1>Listing todolists</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Content</th>
       <th>Priority</th>
+      <th>Time</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,9 +17,7 @@
       <tr>
         <td><%= todolist.content %></td>
         <td><%= todolist.priority %></td>
-        <td><%= link_to 'Show', todolist %></td>
-        <td><%= link_to 'Edit', edit_todolist_path(todolist) %></td>
-        <td><%= link_to 'Destroy', todolist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<td><%= todolist.todotime.strftime("%Y-%m-%d") %></td>
       </tr>
     <% end %>
   </tbody>
@@ -27,3 +26,5 @@
 <br>
 
 <%= link_to 'New Todolist', new_todolist_path %>
+<br>
+<%= link_to 'view your todo on calender', todocal_path %>

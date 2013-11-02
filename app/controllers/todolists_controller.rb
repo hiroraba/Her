@@ -7,6 +7,10 @@ class TodolistsController < ApplicationController
     @todolists = Todolist.all
   end
 
+  def cal
+    render 'calender'
+  end
+
   # GET /todolists/1
   # GET /todolists/1.json
   def show
@@ -69,6 +73,6 @@ class TodolistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def todolist_params
-      params.require(:todolist).permit(:content, :priority)
+      params.require(:todolist).permit(:content, :priority, :todotime)
     end
 end
