@@ -6,7 +6,7 @@ Todo::Application.routes.draw do
   match '/about', to: 'static_pages#about', via: 'get'
   match '/newtodo', to: 'todolists#new', via: 'get'
   match '/yourtodo', to: 'todolists#index', via: 'get'
-  match '/todocal', to: 'todolists#cal', via: 'get'
+  match '/todocal', to: 'todolists#todocal', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'

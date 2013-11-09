@@ -7,7 +7,7 @@ class TodolistsController < ApplicationController
     @todolists = Todolist.all
   end
 
-  def cal
+  def todocal
     render 'calender'
   end
 
