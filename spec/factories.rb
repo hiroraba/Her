@@ -5,4 +5,10 @@ FactoryGirl.define do
     password "foobar"
     password_confirmation "foobar"
   end
+
+  factory :todolists do
+    content "I watched Ametalk."
+    priority 1
+    user
+  end
 end
