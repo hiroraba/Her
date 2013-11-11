@@ -6,7 +6,7 @@ FactoryGirl.define do
     password_confirmation "foobar"
   end
 
-  factory :todolists do
+  factory :todolist do
     content "I watched Ametalk."
     priority 1
     user

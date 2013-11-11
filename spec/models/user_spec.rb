@@ -61,4 +61,20 @@ describe User do
     before { @user.save }
     its(:remember_token) {should_not be_blank}
   end
+
+  describe "todolist assciation" do
+    before { @user.save }
+
+    let!(:older_todolists) do
+      FactoryGirl.create(:todolist, user: @user, created_at: 1.day.ago)
+    end
+
+    let!(:newer_todolists) do
+      FactoryGirl.create(:todolist, user: @user, created_at: 1.hour.ago)
+    end
+
+    it "should have the right list in the right order" do
+      expect(@user.todolists.to_a).to eq [newer_todolists, older_todolists]
+    end
+  end
 end
