@@ -13,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% @todolists.each do |todolist| %>
+    <% current_user.todolists.each do |todolist| %>
       <tr>
         <td><%= todolist.content %></td>
         <td><%= todolist.priority %></td>
@@ -22,7 +22,6 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Todolist', new_todolist_path %>

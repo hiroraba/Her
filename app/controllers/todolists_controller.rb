@@ -4,7 +4,7 @@ class TodolistsController < ApplicationController
   # GET /todolists
   # GET /todolists.json
   def index
-    @todolists = Todolist.all
+  #@todolists = Todolist.all;
   end
 
   def todocal
@@ -28,7 +28,7 @@ class TodolistsController < ApplicationController
   # POST /todolists
   # POST /todolists.json
   def create
-    @todolist = Todolist.new(todolist_params)
+    @todolist = current_user.todolists.build(todolist_params)
 
     respond_to do |format|
       if @todolist.save
