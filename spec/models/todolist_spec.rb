@@ -22,4 +22,19 @@ describe Todolist do
     before {@todolist.user_id = nil }
     it { should_not be_valid }
   end
+
+  describe "with brank content" do
+    before { @todolist.content = "" }
+    it { should_not be_valid }
+  end
+
+  describe "with content that is too long" do
+    before { @todolist.content = "a"*1000 }
+    it { should_not be_valid }
+  end
+
+  describe "with content that is too short" do
+    before { @todolist.content = "a"*3 }
+    it { should_not be_valid }
+  end
 end
