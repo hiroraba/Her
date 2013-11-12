@@ -76,5 +76,14 @@ describe User do
     it "should have the right list in the right order" do
       expect(@user.todolists.to_a).to eq [newer_todolists, older_todolists]
     end
+
+    it "should destroy associated todolists" do
+      todolist = @user.todolists.to_a
+      @user.destroy
+      expect(todolist).not_to be_empty
+      todolist.each do |todolist|
+	expect(Todolist.where(id:todolist.id)).to be_empty
+      end
+    end
   end
 end
