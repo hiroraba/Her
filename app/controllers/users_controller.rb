@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
     if @user.save
       sign_in @user
-      redirect_to @user
+      redirect_to yourtodo_path
       flash[:success] = "Welcome to todo list webapp!"
     else
       render 'new'
