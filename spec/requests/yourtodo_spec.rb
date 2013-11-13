@@ -15,10 +15,7 @@ describe "your todo page" do
 
   subject { page }
 
-
   describe "todolist" do
-  
-    before { visit yourtodo_path }
     it { should have_content(t1.content) }
     it { should have_content(t2.content) }
     it { should have_content(user.todolists.count) }
