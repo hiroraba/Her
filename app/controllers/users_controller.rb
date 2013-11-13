@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_filter :signed_in_user, only: [:edit, :update, :show]
+  before_action :set_user, only: [:edit, :update, :destroy]
+  before_filter :signed_in_user, only: [:edit, :update]
+
+  def index
+    render 'shared/no_contents.html.erb'
+  end
+
+  def show
+    render 'shared/no_contents.html.erb'
+  end
 
   # GET /users/1/edit
   def edit
