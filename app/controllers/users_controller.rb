@@ -10,6 +10,10 @@ class UsersController < ApplicationController
     render 'shared/no_contents.html.erb'
   end
 
+  def new
+    @user = User.new
+  end
+
   # GET /users/1/edit
   def edit
   end
