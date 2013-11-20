@@ -16,8 +16,8 @@ describe "todo calender spec" do
   
   describe "You can see Canlender after visit todocal_path " do
     before do
-      visit todocal_path
+      visit 'calendar/index'
     end
-    it { expect(page).to have_content('Calender') }
+    it { expect(page).to have_selector('div#calendar', :text => "") }
   end
 end
