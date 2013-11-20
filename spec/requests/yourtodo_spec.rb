@@ -27,4 +27,14 @@ describe "your todo page" do
   describe "you can't read others todolist" do
     it { should_not have_content(t3.content) }
   end
+
+  describe "you can see your todo list on calander" do
+    
+    before do
+      click_link "view your todo on calendar"
+    end
+
+    it { should have_selector("div#calendar", :text => "") }
+
+  end
 end
