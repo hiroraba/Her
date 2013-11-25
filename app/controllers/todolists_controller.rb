@@ -4,7 +4,11 @@ class TodolistsController < ApplicationController
   # GET /todolists
   # GET /todolists.json
   def index
-  #@todolists = Todolist.all;
+    @todolist = current_user.todolists
+    respond_to do |format|
+      format.html
+      format.json {render :json => @todolist}
+    end
   end
 
   def todocal
@@ -14,6 +18,7 @@ class TodolistsController < ApplicationController
   # GET /todolists/1
   # GET /todolists/1.json
   def show
+    @todolist = Todolist.find(params[:id])
   end
 
   # GET /todolists/new
