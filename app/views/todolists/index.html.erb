@@ -11,9 +11,8 @@
       <th></th>
     </tr>
   </thead>
-
   <tbody>
-    <% current_user.todolists.each do |todolist| %>
+    <% @todolist.each do |todolist| %>
       <tr>
         <td><%= todolist.content %></td>
         <td><%= todolist.priority %></td>
