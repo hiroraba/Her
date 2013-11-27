@@ -6,4 +6,4 @@ gemfile:
 notifications:
   hipchat:
     rooms:
-      secure: L2L6WhU+qVE/8Gflv/EWKz6D0UrV8XUA0FDKf9MNAuiuFhpJVl8lyp3SIZIZ7vS3YCISggMocsaIB40ibqRywm3Oll/xpv9BngITJSZwAb+lni5lyKj858EoUPCC56XFnV5vjrxF64B+/FDt5tLtuGVGA2/hxk8OzHlQ9epYfgk=
+      secure: Q1pO5hjJVToILfRzEYZBL4TRYcbOdRRFGvBSmSEb5t8pKMb8Wv+PRLATW0BwzgAxc0tcLhQgnpOdxYFVQr28PlrsFQioVi5PkOeRiA9Uk9zot7oPvkMGciRMXgkhYfxCSTIwaqfGcC0agtD9cCjLCN+AaPKi4ZwalBwY4I8bd8I=
