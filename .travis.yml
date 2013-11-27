@@ -1,9 +1,7 @@
 language: ruby
 rvm:
 - 2.0.0
-gemfile:
-- Gemfile
 notifications:
   hipchat:
     rooms:
-      secure: Q1pO5hjJVToILfRzEYZBL4TRYcbOdRRFGvBSmSEb5t8pKMb8Wv+PRLATW0BwzgAxc0tcLhQgnpOdxYFVQr28PlrsFQioVi5PkOeRiA9Uk9zot7oPvkMGciRMXgkhYfxCSTIwaqfGcC0agtD9cCjLCN+AaPKi4ZwalBwY4I8bd8I=
+      secure: MzzVPTNOdoNtXwEdCXufM9QK1iyLI04NRfEXPQ95reprQEZcLGNOqu4W2cU1inFqQAm95mGjHelK2o+kkruDSzmUse00Xr/DwPCs8kpS2tj6Tn6JWXFWPB02mlnW68vTZuo5wKqHFmPXqRzexLgtT63SyUAIJz8cFnpWvZrjqsk=
