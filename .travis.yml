@@ -3,5 +3,7 @@ rvm:
 - 2.0.0
 gemfile:
 - Gemfile
-dd:
-  secure: A9TetKhXoEqOKJtP2A4yP8xgExTAkSwvn13WJWsGsyLFpCD7woozpHPscUNhEj/mE+ET99dw3bf1kEUAE0szNPalL6hTcP3DconeZElMuKoVWdEcMkQlFVP+6SDXaWekwnPYdcDyyW2tLbMb2PD8RS5GgPoYSRTP2OocGwGxM+Q=
+notifications:
+  hipchat:
+    rooms:
+      secure: L2L6WhU+qVE/8Gflv/EWKz6D0UrV8XUA0FDKf9MNAuiuFhpJVl8lyp3SIZIZ7vS3YCISggMocsaIB40ibqRywm3Oll/xpv9BngITJSZwAb+lni5lyKj858EoUPCC56XFnV5vjrxF64B+/FDt5tLtuGVGA2/hxk8OzHlQ9epYfgk=
