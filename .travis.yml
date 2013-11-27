@@ -1,5 +1,7 @@
 language: ruby
 rvm:
-    - 2.0.0
+- 2.0.0
 gemfile:
-    - Gemfile
+- Gemfile
+dd:
+  secure: A9TetKhXoEqOKJtP2A4yP8xgExTAkSwvn13WJWsGsyLFpCD7woozpHPscUNhEj/mE+ET99dw3bf1kEUAE0szNPalL6hTcP3DconeZElMuKoVWdEcMkQlFVP+6SDXaWekwnPYdcDyyW2tLbMb2PD8RS5GgPoYSRTP2OocGwGxM+Q=
