@@ -7,8 +7,9 @@ FactoryGirl.define do
   end
 
   factory :todolist do
-    content "I watched Ametalk."
+    title "I watched Ametalk."
     priority 1
+    allDay true
     user
   end
 end

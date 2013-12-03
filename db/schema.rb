@@ -11,15 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131110152905) do
+ActiveRecord::Schema.define(version: 20131203161531) do
 
   create_table "todolists", force: true do |t|
-    t.string   "content"
     t.integer  "priority"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "todotime"
     t.integer  "user_id"
+    t.datetime "end"
+    t.datetime "start"
+    t.string   "title"
+    t.boolean  "allDay"
   end
 
   add_index "todolists", ["user_id"], name: "index_todolists_on_user_id"

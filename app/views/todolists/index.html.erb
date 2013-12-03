@@ -5,7 +5,8 @@
     <tr>
       <th>Content</th>
       <th>Priority</th>
-      <th>Time</th>
+      <th>Start</th>
+      <th>end</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +15,10 @@
   <tbody>
     <% @todolist.each do |todolist| %>
       <tr>
-        <td><%= todolist.content %></td>
+        <td><%= todolist.title %></td>
         <td><%= todolist.priority %></td>
-	<td><%= todolist.todotime.strftime("%Y-%m-%d") %></td>
+	<td><%= todolist.start.strftime("%Y-%m-%d") %></td>
+	<td><%= todolist.end.strftime("%Y-%m-%d") %></td>
       </tr>
     <% end %>
   </tbody>
