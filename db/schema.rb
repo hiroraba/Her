@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131203161054) do
+ActiveRecord::Schema.define(version: 20131203161531) do
 
   create_table "todolists", force: true do |t|
     t.integer  "priority"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20131203161054) do
     t.datetime "end"
     t.datetime "start"
     t.string   "title"
+    t.boolean  "allDay"
   end
 
   add_index "todolists", ["user_id"], name: "index_todolists_on_user_id"
