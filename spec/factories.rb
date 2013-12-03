@@ -7,8 +7,10 @@ FactoryGirl.define do
   end
 
   factory :todolist do
-    content "I watched Ametalk."
+    title "I watched Ametalk."
     priority 1
+    end 1.hour.ago
+    start 1.hour.ago
     user
   end
 end
