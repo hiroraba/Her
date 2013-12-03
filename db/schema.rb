@@ -14,11 +14,13 @@
 ActiveRecord::Schema.define(version: 20131110152905) do
 
   create_table "todolists", force: true do |t|
-    t.string   "content"
+    t.string   "title"
     t.integer  "priority"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "todotime"
+    t.datetime "end"
+    t.datetime "start"
+    t.boolean  "allDay"
     t.integer  "user_id"
   end
 
