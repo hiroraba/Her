@@ -9,8 +9,6 @@ FactoryGirl.define do
   factory :todolist do
     title "I watched Ametalk."
     priority 1
-    "end" 1.hour.ago
-    start 1.hour.ago
     allDay true
     user
   end

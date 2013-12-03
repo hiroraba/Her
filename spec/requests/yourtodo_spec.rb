@@ -3,10 +3,10 @@ require 'spec_helper'
 describe "your todo page" do
 
   let(:user) { FactoryGirl.create(:user) }
-  let(:other_user) { FactoryGirl.create(:user, name: "others", email: "others@others.co.jp") }
-  let!(:t1) { FactoryGirl.create(:todolist, user: user, title: "Fooooooo") }
-  let!(:t2) { FactoryGirl.create(:todolist, user: user, title: "Barrrrrr") }
-  let!(:t3) { FactoryGirl.create(:todolist, user: other_user, title: "OTHER_Barrrrrr") }
+  let(:other_user) { FactoryGirl.create(:user, name: "others", email: "others@others.co.jp")}
+  let!(:t1) { FactoryGirl.create(:todolist, user: user, title: "Fooooooo", start: 1.hour.ago, end: 1.hour.ago)}
+  let!(:t2) { FactoryGirl.create(:todolist, user: user, title: "Barrrrrr", start: 1.hour.ago, end: 1.hour.ago)}
+  let!(:t3) { FactoryGirl.create(:todolist, user: other_user, title: "OTHER_Barrrrrr", start: 1.hour.ago, end: 1.hour.ago)}
 
   before do
     visit signin_path
