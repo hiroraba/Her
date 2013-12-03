@@ -1,7 +1,5 @@
-class AddEndStartallDayToTodolists < ActiveRecord::Migration
+class AddTodotimeToTodolists < ActiveRecord::Migration
   def change
-    add_column :todolists, :end, :datetime
-    add_column :todolists, :start, :datetime
-    add_column :todolists, :allDay, :boolean
+    add_column :todolists, :todotime, :datetime
   end
 end
