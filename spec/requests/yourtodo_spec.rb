@@ -4,6 +4,7 @@ describe "your todo page" do
 
   let(:user) { FactoryGirl.create(:user) }
   let(:other_user) { FactoryGirl.create(:user, name: "others", email: "others@others.co.jp")}
+  let(:new_user) { FactoryGirl.create(:user, name: "new_user", email: "new_user@newusers.co.jp")}
   let!(:t1) { FactoryGirl.create(:todolist, user: user, title: "Fooooooo", start: 1.hour.ago, end: 1.hour.ago)}
   let!(:t2) { FactoryGirl.create(:todolist, user: user, title: "Barrrrrr", start: 1.hour.ago, end: 1.hour.ago)}
   let!(:t3) { FactoryGirl.create(:todolist, user: other_user, title: "OTHER_Barrrrrr", start: 1.hour.ago, end: 1.hour.ago)}
@@ -14,7 +15,6 @@ describe "your todo page" do
     fill_in "Password", with: user.password
     click_button "Sign in"
   end
-
 
   subject { page }
 
@@ -35,6 +35,15 @@ describe "your todo page" do
     end
 
     it { should have_selector("div#calendar", :text => "") }
+  end
 
+  describe "if you registered no todo." do
+    before do
+      visit signin_path
+      fill_in "Email",    with: new_user.email.upcase
+      fill_in "Password", with: new_user.password
+      click_button "Sign in"
+    end
+    it { should have_content("there is no todo.") }
   end
 end

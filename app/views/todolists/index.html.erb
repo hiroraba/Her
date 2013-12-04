@@ -1,5 +1,5 @@
+<% if @todolist.any? %>
 <h1>Listing todolists</h1>
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -24,6 +24,11 @@
   </tbody>
 </table>
 <br>
+<% else %>
+  <div class="page-header">
+      <h1>Nocontents. <small>Oops, there is no todo.</small></h1>
+  </div>
+<% end %>
 
 <%= link_to 'New Todolist', new_todolist_path %>
 <br>
