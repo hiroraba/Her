@@ -100,6 +100,7 @@ GEM
     jquery-ui-rails (4.1.0)
       railties (>= 3.1.0)
     json (1.8.1)
+    libv8 (3.16.14.3)
     listen (2.3.1)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -148,6 +149,7 @@ GEM
       ffi (>= 0.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    ref (1.0.5)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec (2.13.0)
@@ -199,6 +201,9 @@ GEM
     term-ansicolor (1.2.2)
       tins (~> 0.8)
     terminal-notifier-guard (1.5.3)
+    therubyracer (0.12.0)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -244,5 +249,6 @@ DEPENDENCIES
   spork
   sqlite3 (= 1.3.8)
   terminal-notifier-guard
+  therubyracer
   turbolinks
   uglifier (>= 1.3.0)
